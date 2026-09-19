@@ -1,182 +1,1126 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="042 Distribuidora â€” bebidas, energÃ©ticos e conveniÃªncia com delivery.">
-<title>042 Distribuidora | ConveniÃªncia & Delivery</title>
-<style>
-:root{--black:#090909;--black2:#121212;--gold:#d8ad32;--gold2:#f1cf63;--white:#f7f7f7;--muted:#b8b8b8}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--black);color:var(--white);line-height:1.5}
-a{text-decoration:none;color:inherit}
-header{position:sticky;top:0;z-index:20;background:rgba(9,9,9,.94);backdrop-filter:blur(10px);border-bottom:1px solid #272727}
-.nav{max-width:1150px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
-.brand{display:flex;align-items:center;gap:12px;font-weight:800}
-.brand img{width:55px;height:55px;object-fit:cover;border-radius:50%;border:2px solid var(--gold)}
-.brand span{font-size:18px}.brand small{display:block;color:var(--gold);font-size:11px;letter-spacing:1.5px}
-nav{display:flex;gap:22px;color:#ddd;font-size:14px}
-nav a:hover{color:var(--gold2)}
-.btn{display:inline-block;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#111;font-weight:800;padding:13px 20px;border-radius:10px;box-shadow:0 8px 25px rgba(216,173,50,.18)}
-.btn:hover{transform:translateY(-1px)}
-.hero{min-height:620px;display:grid;place-items:center;text-align:center;padding:70px 20px;position:relative;overflow:hidden;background:
-radial-gradient(circle at 50% 30%,rgba(216,173,50,.18),transparent 34%),
-linear-gradient(180deg,#0b0b0b,#090909)}
-.hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:45px 45px;pointer-events:none}
-.hero-content{position:relative;z-index:1;max-width:850px}
-.kicker{color:var(--gold2);font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:13px}
-h1{font-size:clamp(42px,8vw,78px);line-height:.98;margin:15px 0 20px}
-h1 span{color:var(--gold2)}
-.hero p{max-width:650px;margin:0 auto 30px;color:#d0d0d0;font-size:18px}
-.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.btn.secondary{background:transparent;color:var(--white);border:1px solid #444;box-shadow:none}
-section{padding:75px 20px}
-.container{max-width:1150px;margin:auto}
-.section-title{text-align:center;margin-bottom:38px}
-.section-title h2{font-size:34px;margin-bottom:8px}
-.section-title p{color:var(--muted)}
-.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.cat{background:linear-gradient(145deg,#171717,#0f0f0f);border:1px solid #292929;border-radius:16px;padding:25px;text-align:center;transition:.2s}
-.cat:hover{border-color:#8d7121;transform:translateY(-3px)}
-.cat .icon{font-size:36px;margin-bottom:10px}.cat h3{font-size:17px}.cat p{font-size:13px;color:#aaa;margin-top:5px}
-.products{background:#0d0d0d}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.card{background:#151515;border:1px solid #292929;border-radius:17px;overflow:hidden}
-.product-art{height:190px;display:grid;place-items:center;background:radial-gradient(circle at 50% 30%,#2b2b2b,#111)}
-.bottle{font-size:74px;filter:drop-shadow(0 12px 12px #000)}
-.product-body{padding:18px}.product-body small{color:var(--gold2);font-weight:700}.product-body h3{margin:4px 0 7px;font-size:18px}.product-body p{color:#aaa;font-size:13px;min-height:40px}
-.order{display:block;text-align:center;margin-top:14px;padding:10px;border-radius:9px;border:1px solid #735d1d;color:var(--gold2);font-weight:700}
-.order:hover{background:#211c0d}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
-.about-box{background:#111;border:1px solid #292929;border-radius:20px;padding:32px}
-.about-box h2{font-size:34px;margin-bottom:12px}.about-box p{color:#bbb}
-.features{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}
-.feature{padding:17px;border:1px solid #2a2a2a;border-radius:12px;background:#151515}.feature b{display:block;margin-bottom:4px}.feature span{color:#aaa;font-size:13px}
-.contact{background:linear-gradient(135deg,#17130a,#0d0d0d);text-align:center}
-.contact h2{font-size:38px;margin-bottom:10px}.contact p{color:#bbb;margin-bottom:24px}
-.notice{text-align:center;padding:16px 20px;background:#0a0a0a;border-top:1px solid #242424;color:#9f9f9f;font-size:12px}
-footer{border-top:1px solid #242424;padding:30px 20px;color:#888;text-align:center;font-size:13px}
-@media(max-width:850px){nav{display:none}.categories,.grid{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}}
-@media(max-width:520px){.categories,.grid{grid-template-columns:1fr 1fr;gap:10px}.cat{padding:18px 10px}.product-art{height:155px}.bottle{font-size:60px}.hero{min-height:570px}section{padding:58px 15px}.brand img{width:48px;height:48px}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zero42 ConveniÃªncia & Delivery | Bebidas Geladas & Drinks</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Fontes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Tailwind Color Tokens -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            zdark: '#0a0c10',
+            zsurface: '#11151e',
+            zcard: '#161c28',
+            zcardhover: '#1e2535',
+            zborder: '#252f44',
+            zgold: '#f59e0b',
+            zneon: '#fbbf24',
+            zamber: '#d97706',
+            zgreen: '#10b981'
+          },
+          fontFamily: {
+            title: ['Syne', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #0a0c10;
+      color: #f3f4f6;
+    }
+    .font-title {
+      font-family: 'Syne', sans-serif;
+    }
+    .card-zoom {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-zoom:hover {
+      transform: translateY(-4px);
+      border-color: rgba(245, 158, 11, 0.8);
+      box-shadow: 0 15px 30px -10px rgba(245, 158, 11, 0.2);
+    }
+    .card-zoom:hover .img-scale {
+      transform: scale(1.04);
+    }
+    .img-scale {
+      transition: transform 0.4s ease-out;
+    }
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0a0c10;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #252f44;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #f59e0b;
+    }
+  </style>
 </head>
-<body>
-<header>
-  <div class="nav">
-    <a class="brand" href="#">
-      <img src="logo.jpg" alt="Logo 042 Distribuidora">
-      <div><span>042 DISTRIBUIDORA</span><small>CONVENIÃŠNCIA â€¢ DELIVERY</small></div>
-    </a>
-    <nav>
-      <a href="#categorias">Categorias</a>
-      <a href="#produtos">Produtos</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#contato">Contato</a>
-    </nav>
-    <a class="btn" onclick="finalizarPedido()">ðŸ›’ Carrinho (<span id="qtdCarrinho">0</span>)</a>
-  </div>
-</header>
 
-<main>
-<section class="hero">
-  <div class="hero-content">
-    <div class="kicker">Conveniencia â€¢ Delivery â€¢ 042</div>
-    <h1>Sua bebida favorita,<br><span>do nosso estoque</span> atÃ© vocÃª.</h1>
-    <p>ConheÃ§a a 042 Distribuidora. Bebidas, cervejas, energÃ©ticos e itens de conveniÃªncia para o seu rolÃª.</p>
-    <div class="hero-actions">
-      <a class="btn" href="#produtos">Ver produtos</a>
-      <a class="btn secondary" href="#contato">Falar no WhatsApp</a>
-    </div>
-  </div>
-</section>
+<body class="bg-zdark text-slate-100 antialiased selection:bg-zgold selection:text-black">
 
-<section id="categorias">
-  <div class="container">
-    <div class="section-title"><h2>Categorias</h2><p>Encontre o que combina com o seu momento.</p></div>
-    <div class="categories">
-      <div class="cat"><div class="icon">ðŸ¥ƒ</div><h3>Whiskies</h3><p>RÃ³tulos conhecidos e opÃ§Ãµes variadas.</p></div>
-      <div class="cat"><div class="icon">ðŸº</div><h3>Cervejas</h3><p>Long neck, lata e outras opÃ§Ãµes.</p></div>
-      <div class="cat"><div class="icon">âš¡</div><h3>EnergÃ©ticos</h3><p>Monster, Red Bull e mais.</p></div>
-      <div class="cat"><div class="icon">ðŸ¥¤</div><h3>ConveniÃªncia</h3><p>Refrigerantes, Ã¡gua, gelo e outros.</p></div>
-    </div>
+  <!-- Faixa de Destaque Superior -->
+  <div class="bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 text-black py-2 px-4 font-bold text-xs sm:text-sm text-center shadow-lg flex items-center justify-center gap-2">
+    <span>ðŸ‘‘</span>
+    <span><strong>ZERO42 DELIVERY:</strong> Cervejas trincando, whiskies, tequilas e licores na sua porta!</span>
+    <span class="hidden md:inline">â€¢ PeÃ§a jÃ¡ via WhatsApp</span>
+    <span>ðŸ›µ</span>
   </div>
-</section>
 
-<section class="products" id="produtos">
-  <div class="container">
-    <div class="section-title"><h2>Produtos em destaque</h2><p>Alguns dos produtos que podem fazer parte do catÃ¡logo da 042.</p></div>
-    <div class="grid">
-      <article class="card"><div class="product-art"><div class="bottle">ðŸ¥ƒ</div></div><div class="product-body"><small>WHISKY</small><h3>Jack Daniel's</h3><p>Whisky clÃ¡ssico para sua seleÃ§Ã£o.</p><a class="order" href="#" onclick="adicionarCarrinho('Jack Daniel's')">Adicionar ao Carrinho</a></div></article>
-      <article class="card"><div class="product-art"><div class="bottle">ðŸº</div></div><div class="product-body"><small>CERVEJA</small><h3>Heineken</h3><p>OpÃ§Ã£o para gelar e aproveitar.</p><a class="order" href="#" onclick="adicionarCarrinho('Heineken')">Adicionar ao Carrinho</a></div></article>
-      <article class="card"><div class="product-art"><div class="bottle">ðŸº</div></div><div class="product-body"><small>CERVEJA</small><h3>Skol</h3><p>Uma das opÃ§Ãµes tradicionais do catÃ¡logo.</p><a class="order" href="#" onclick="adicionarCarrinho('Skol')">Adicionar ao Carrinho</a></div></article>
-      <article class="card"><div class="product-art"><div class="bottle">ðŸº</div></div><div class="product-body"><small>CERVEJA</small><h3>Brahma</h3><p>ClÃ¡ssico para diferentes ocasiÃµes.</p><a class="order" href="#" onclick="adicionarCarrinho('Brahma')">Adicionar ao Carrinho</a></div></article>
-      <article class="card"><div class="product-art"><div class="bottle">âš¡</div></div><div class="product-body"><small>ENERGÃ‰TICO</small><h3>Monster</h3><p>Energia para acompanhar o seu dia.</p><a class="order" href="#" onclick="adicionarCarrinho('Monster')">Adicionar ao Carrinho</a></div></article>
-      <article class="card"><div class="product-art"><div class="bottle">âš¡</div></div><div class="product-body"><small>ENERGÃ‰TICO</small><h3>Red Bull</h3><p>Uma opÃ§Ã£o conhecida de energÃ©tico.</p><a class="order" href="#" onclick="adicionarCarrinho('Red Bull')">Adicionar ao Carrinho</a></div></article>
-      <article class="card"><div class="product-art"><div class="bottle">ðŸº</div></div><div class="product-body"><small>CERVEJA</small><h3>Amstel</h3><p>Mais uma opÃ§Ã£o para o seu pedido.</p><a class="order" href="#" onclick="adicionarCarrinho('Amstel')">Adicionar ao Carrinho</a></div></article>
-      <article class="card"><div class="product-art"><div class="bottle">ðŸ¥¤</div></div><div class="product-body"><small>CONVENIÃŠNCIA</small><h3>Outros produtos</h3><p>Ãgua, gelo, refrigerantes e muito mais.</p><a class="order" href="#" onclick="adicionarCarrinho('Outros produtos')">Adicionar ao Carrinho</a></div></article>
-    </div>
-  </div>
-</section>
+  <header class="sticky top-0 z-40 bg-zdark/95 backdrop-blur-md border-b border-zborder/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Marca / Logo Zero42 -->
+      <a href="#" class="flex items-center gap-3 group shrink-0">
+        <div class="w-12 h-12 rounded-2xl bg-black border border-amber-500/40 p-1 flex items-center justify-center overflow-hidden shadow-md shadow-amber-500/10 group-hover:border-amber-400 transition-all">
+          <img 
+            id="brand-logo"
+            src="photo_5003775425880198242_x.jpg" 
+            alt="Logo Zero42" 
+            class="w-full h-full object-contain"
+            onerror="this.onerror=null; this.src='https://placehold.co/120x120/000000/f59e0b?text=ZERO42';"
+          />
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[10px] text-amber-400 font-extrabold tracking-widest uppercase flex items-center gap-1">
+            <i class="fa-solid fa-crown text-[9px]"></i> ConveniÃªncia
+          </span>
+          <span class="font-title text-2xl font-black text-white leading-none tracking-tight">
+            ZERO<span class="text-zneon">42</span>
+            <span class="ml-1 text-[9px] font-bold text-emerald-400 bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-700/60 uppercase">Delivery</span>
+          </span>
+        </div>
+      </a>
 
-<section id="sobre">
-  <div class="container about">
-    <div class="about-box">
-      <h2>042 Distribuidora</h2>
-      <p>Uma experiÃªncia simples para vocÃª encontrar suas bebidas e itens de conveniÃªncia e fazer seu pedido com praticidade.</p>
-      <div class="features">
-        <div class="feature"><b>ðŸšš Delivery</b><span>Consulte a Ã¡rea e condiÃ§Ãµes de entrega.</span></div>
-        <div class="feature"><b>ðŸ“¦ Variedade</b><span>Diferentes categorias em um sÃ³ lugar.</span></div>
-        <div class="feature"><b>ðŸ’¬ Atendimento</b><span>Pedido e dÃºvidas pelo WhatsApp.</span></div>
-        <div class="feature"><b>â­ Qualidade</b><span>Produtos de marcas conhecidas.</span></div>
+      <!-- Barra de Busca RÃ¡pida -->
+      <div class="hidden md:flex flex-1 max-w-md mx-4">
+        <div class="relative w-full">
+          <input 
+            type="text" 
+            id="searchInput" 
+            onkeyup="searchProducts(this.value)"
+            placeholder="Buscar bebidas, chopps, whisky, tequila..." 
+            class="w-full bg-zsurface border border-zborder rounded-xl px-4 py-2.5 pl-10 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-zgold transition-all"
+          />
+          <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-xs"></i>
+          <button id="clearSearchBtn" onclick="clearSearchInput()" class="hidden absolute right-3 top-2.5 text-slate-400 hover:text-white text-xs">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- AÃ§Ãµes: Instagram, WhatsApp & Sacola -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        
+        <!-- Link Instagram @_zero.42 -->
+        <a 
+          href="https://www.instagram.com/_zero.42?stkn=N3diZjZpMjNlc3Vi" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-pink-600 via-purple-600 to-amber-500 hover:opacity-90 text-white text-xs font-bold transition-all shadow-md"
+          title="Ver Instagram @_zero.42"
+        >
+          <i class="fa-brands fa-instagram text-sm"></i>
+          <span class="hidden sm:inline">@_zero.42</span>
+        </a>
+
+        <!-- BotÃ£o WhatsApp Direto -->
+        <a 
+          href="https://wa.me/5542999999999?text=Ol%C3%A1%20Zero42!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido." 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="hidden lg:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-md"
+        >
+          <i class="fa-brands fa-whatsapp text-sm"></i>
+          <span>WhatsApp</span>
+        </a>
+
+        <!-- BotÃ£o Sacola / Carrinho -->
+        <button 
+          onclick="toggleCart(true)" 
+          class="relative px-3.5 py-2 rounded-xl bg-zsurface hover:bg-zcardhover border border-zborder hover:border-zgold text-white transition-all flex items-center gap-2 group" 
+          aria-label="Abrir Sacola de Pedidos"
+        >
+          <i class="fa-solid fa-bag-shopping text-zgold group-hover:scale-110 transition-transform"></i>
+          <span class="text-xs font-bold hidden sm:inline">Sacola</span>
+          <span id="header-cart-badge" class="bg-zgold text-black text-[11px] font-black rounded-full min-w-[20px] h-5 px-1 flex items-center justify-center shadow">0</span>
+        </button>
+
       </div>
     </div>
-    <div class="about-box">
-      <h2>Seu pedido comeÃ§a aqui.</h2>
-      <p>Escolha os produtos, chame a 042 e confirme disponibilidade, preÃ§os, formas de pagamento e entrega.</p>
+
+    <!-- Busca Mobile -->
+    <div class="md:hidden px-4 pb-3">
+      <div class="relative w-full">
+        <input 
+          type="text" 
+          id="searchInputMobile" 
+          onkeyup="searchProducts(this.value)"
+          placeholder="Buscar bebidas, chopps, whisky..." 
+          class="w-full bg-zsurface border border-zborder rounded-xl px-4 py-2 pl-9 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-zgold"
+        />
+        <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
+      </div>
+    </div>
+  </header>
+
+  <section class="relative bg-zdark overflow-hidden border-b border-zborder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+      
+      <!-- Banner Card Hero Principal -->
+      <div class="relative rounded-3xl overflow-hidden border border-amber-500/40 shadow-2xl bg-black">
+        
+        <!-- Imagem PanorÃ¢mica Fornecida -->
+        <div class="relative w-full h-80 sm:h-[420px] md:h-[500px] overflow-hidden group">
+          <img 
+            src="watermarked_img_6216965909714004686.jpg" 
+            alt="CardÃ¡pio Completo Zero42 - Cervejas, Chopps, Whiskies e Licores" 
+            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+            onerror="this.onerror=null; this.src='https://placehold.co/1200x600/161c28/f59e0b?text=Zero42+Cardapio+Completo';"
+          />
+          
+          <!-- Gradiente Dark Sobreposto para Realce dos Textos -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent"></div>
+        </div>
+
+        <!-- ConteÃºdo Textual e CTA Sobreposto -->
+        <div class="absolute bottom-0 left-0 right-0 p-5 sm:p-8 md:p-12 space-y-3 sm:space-y-4 max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md border border-amber-500/60 text-zneon text-[11px] sm:text-xs font-black uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-zneon animate-pulse"></span>
+            <span>CardÃ¡pio Oficial Zero42</span>
+          </div>
+
+          <h1 class="font-title text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight drop-shadow-md">
+            CARDÃPIO COMPLETO <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-zneon via-amber-400 to-amber-500">
+              ESCOLHA A SUA BEBIDA!
+            </span>
+          </h1>
+
+          <p class="text-slate-200 text-xs sm:text-sm md:text-base leading-relaxed max-w-xl font-medium drop-shadow">
+            Cervejas artesanais trincando de geladas, Chopp de Vinho, Growlers, Whiskies lendÃ¡rios Vikings, Tequila JosÃ© Cuervo e o famoso Licor Ballena.
+          </p>
+
+          <!-- AÃ§Ãµes RÃ¡pidas -->
+          <div class="pt-2 flex flex-wrap items-center gap-3">
+            <a 
+              href="#catalogo" 
+              class="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-600 hover:to-yellow-500 text-black font-extrabold text-xs sm:text-sm shadow-xl shadow-amber-500/20 transition-transform active:scale-95 flex items-center gap-2"
+            >
+              <i class="fa-solid fa-beer-mug-empty"></i>
+              <span>Ver Produtos & Pedir</span>
+            </a>
+
+            <a 
+              href="https://www.instagram.com/_zero.42?stkn=N3diZjZpMjNlc3Vi" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="px-5 py-3 rounded-xl bg-black/70 hover:bg-black border border-pink-500/60 text-white font-bold text-xs sm:text-sm backdrop-blur-md transition-all flex items-center gap-2"
+            >
+              <i class="fa-brands fa-instagram text-pink-400"></i>
+              <span>Seguir @_zero.42</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Diferenciais RÃ¡pidos -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4 text-xs font-semibold">
+        <div class="p-3.5 rounded-2xl bg-zsurface border border-zborder flex items-center gap-3">
+          <i class="fa-solid fa-snowflake text-cyan-400 text-lg"></i>
+          <div>
+            <p class="text-white font-bold">Extra Gelada</p>
+            <p class="text-[11px] text-slate-400">Na temperatura certa (-4Â°C)</p>
+          </div>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-zsurface border border-zborder flex items-center gap-3">
+          <i class="fa-solid fa-motorcycle text-zgold text-lg"></i>
+          <div>
+            <p class="text-white font-bold">Tele-Entrega RÃ¡pida</p>
+            <p class="text-[11px] text-slate-400">Taxa Fixa R$ 7,00</p>
+          </div>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-zsurface border border-zborder flex items-center gap-3">
+          <i class="fa-solid fa-shield-halved text-emerald-400 text-lg"></i>
+          <div>
+            <p class="text-white font-bold">100% Originais</p>
+            <p class="text-[11px] text-slate-400">ProcedÃªncia e Qualidade</p>
+          </div>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-zsurface border border-zborder flex items-center gap-3">
+          <i class="fa-brands fa-pix text-emerald-400 text-lg"></i>
+          <div>
+            <p class="text-white font-bold">Pagamento FÃ¡cil</p>
+            <p class="text-[11px] text-slate-400">PIX, CartÃ£o ou Dinheiro</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="catalogo">
+    
+    <!-- CabeÃ§alho do CatÃ¡logo com Filtros de Categoria -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-8 gap-4">
+      <div>
+        <div class="flex items-center gap-2 text-zgold text-xs font-extrabold uppercase tracking-widest mb-1">
+          <i class="fa-solid fa-wine-bottle"></i> SeleÃ§Ã£o Especial
+        </div>
+        <h2 class="font-title text-2xl sm:text-3xl font-black text-white">
+          Produtos em Destaque
+        </h2>
+        <p class="text-slate-400 text-xs sm:text-sm mt-1">
+          Escolha suas bebidas originais da Zero42 e envie seu pedido formatado diretamente no WhatsApp.
+        </p>
+      </div>
+
+      <!-- Filtros DinÃ¢micos -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 lg:pb-0 scrollbar-none">
+        <button onclick="applyCategoryFilter('todos')" class="filter-chip active px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap bg-zgold text-black transition-all">
+          Todos (10)
+        </button>
+        <button onclick="applyCategoryFilter('cervejas')" class="filter-chip px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap bg-zsurface text-slate-300 border border-zborder hover:border-zgold transition-all">
+          ðŸº Cervejas & Chopps
+        </button>
+        <button onclick="applyCategoryFilter('destilados')" class="filter-chip px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap bg-zsurface text-slate-300 border border-zborder hover:border-zgold transition-all">
+          ðŸ¥ƒ Destilados & Whiskies
+        </button>
+        <button onclick="applyCategoryFilter('especiais')" class="filter-chip px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap bg-zsurface text-slate-300 border border-zborder hover:border-zgold transition-all">
+          âœ¨ Licores & Combos
+        </button>
+      </div>
+    </div>
+
+    <!-- Grelha de Produtos com as 10 Imagens Reais Fornecidas -->
+    <div id="products-catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <!-- Injetado via Javascript -->
+    </div>
+
+    <!-- NotificaÃ§Ã£o caso a busca venha vazia -->
+    <div id="search-empty-state" class="hidden text-center py-16 space-y-3">
+      <div class="w-16 h-16 rounded-2xl bg-zsurface border border-zborder mx-auto flex items-center justify-center text-slate-500 text-2xl">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <h3 class="font-title text-lg font-bold text-white">Nenhum produto encontrado</h3>
+      <p class="text-xs text-slate-400 max-w-sm mx-auto">Tente buscar por marcas como Praya, Heineken, Vikings, Ballena ou limpe o filtro.</p>
+      <button onclick="clearSearchInput()" class="px-4 py-2 bg-zsurface border border-zgold text-zgold hover:bg-zgold hover:text-black rounded-xl text-xs font-bold transition-all">
+        Ver Todos os Produtos
+      </button>
+    </div>
+
+  </main>
+
+  <section class="border-t border-zborder bg-zsurface/50 py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <!-- Chamada Oficial do Instagram @_zero.42 -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-purple-950/70 via-pink-950/40 to-amber-950/40 border border-pink-500/40 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-pink-500 via-purple-600 to-amber-500 p-0.5 shrink-0 flex items-center justify-center text-white text-2xl sm:text-3xl shadow-lg">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <div>
+            <span class="text-pink-400 text-xs font-extrabold uppercase tracking-wider">Siga nosso perfil oficial</span>
+            <h3 class="font-title text-xl sm:text-2xl font-black text-white">@_zero.42</h3>
+            <p class="text-xs text-slate-300 mt-1">LanÃ§amentos em primeira mÃ£o, novidades de chopp e promoÃ§Ãµes semanais!</p>
+          </div>
+        </div>
+        
+        <a 
+          href="https://www.instagram.com/_zero.42?stkn=N3diZjZpMjNlc3Vi" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-pink-600 to-purple-600 hover:opacity-90 text-white font-extrabold text-xs sm:text-sm flex items-center gap-2 shadow-lg shrink-0 transition-transform active:scale-95"
+        >
+          <i class="fa-brands fa-instagram text-base"></i>
+          <span>Acessar @_zero.42</span>
+        </a>
+      </div>
+
+      <!-- InformaÃ§Ãµes de Atendimento e Entrega -->
+      <div class="grid md:grid-cols-3 gap-6 text-slate-300 text-xs">
+        
+        <div class="p-6 rounded-2xl bg-zcard border border-zborder space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-zgold flex items-center justify-center text-lg mb-2">
+            <i class="fa-solid fa-motorcycle"></i>
+          </div>
+          <h4 class="font-title text-base font-bold text-white">Tele-Entrega RÃ¡pida</h4>
+          <p class="text-slate-400 leading-relaxed">
+            Receba suas garrafas, latas e growlers gelados sem sair de casa. Taxa Ãºnica de entrega para toda a regiÃ£o urbana.
+          </p>
+          <p class="text-amber-400 font-bold pt-1">Taxa Fixa: R$ 7,00</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-zcard border border-zborder space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-zgold flex items-center justify-center text-lg mb-2">
+            <i class="fa-solid fa-clock"></i>
+          </div>
+          <h4 class="font-title text-base font-bold text-white">HorÃ¡rios de Atendimento</h4>
+          <p class="text-slate-400 leading-relaxed">
+            TerÃ§a a Quinta: 18h Ã s 00h<br>
+            Sexta e SÃ¡bado: 17h atÃ© altas horas<br>
+            Domingo: 15h Ã s 23h
+          </p>
+          <span class="inline-block text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-800 px-2 py-0.5 rounded font-bold">Aberto para Pedidos</span>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-zcard border border-zborder space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-zgold flex items-center justify-center text-lg mb-2">
+            <i class="fa-solid fa-credit-card"></i>
+          </div>
+          <h4 class="font-title text-base font-bold text-white">Pagamento na Entrega</h4>
+          <p class="text-slate-400 leading-relaxed">
+            Pague tranquilamente ao receber suas bebidas ou retirando no balcÃ£o: PIX InstantÃ¢neo, CartÃµes de DÃ©bito, CrÃ©dito e Dinheiro.
+          </p>
+          <div class="flex items-center gap-3 text-slate-400 text-lg pt-1">
+            <i class="fa-brands fa-pix text-emerald-400" title="PIX"></i>
+            <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
+            <i class="fa-brands fa-cc-visa" title="Visa"></i>
+            <i class="fa-solid fa-money-bill-wave text-emerald-400" title="Dinheiro"></i>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-zdark border-t border-zborder py-10 text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <img 
+          src="photo_5003775425880198242_x.jpg" 
+          alt="Zero42 Logo RodapÃ©" 
+          class="w-9 h-9 rounded-xl object-contain bg-black border border-zborder p-0.5"
+          onerror="this.onerror=null; this.src='https://placehold.co/60x60/000000/f59e0b?text=042';"
+        />
+        <div>
+          <span class="font-title font-bold text-white text-sm">ZERO42 ConveniÃªncia & Delivery</span>
+          <p class="text-[11px] text-slate-400">Seu melhor encontro Ã© aqui!</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 text-xs font-semibold">
+        <a href="https://www.instagram.com/_zero.42?stkn=N3diZjZpMjNlc3Vi" target="_blank" class="hover:text-pink-400 transition-colors flex items-center gap-1.5 text-slate-300">
+          <i class="fa-brands fa-instagram"></i> @_zero.42
+        </a>
+        <a href="#catalogo" class="hover:text-zgold transition-colors text-slate-300">CardÃ¡pio</a>
+        <button onclick="toggleCart(true)" class="hover:text-zgold transition-colors text-slate-300">Sacola de Pedidos</button>
+      </div>
+
+      <p class="text-center md:text-right text-[11px] text-slate-500">
+        Venda proibida para menores de 18 anos. Beba com responsabilidade.
+      </p>
+    </div>
+  </footer>
+
+  <div id="cart-overlay" onclick="toggleCart(false)" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+  <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-zcard border-l border-zborder z-50 transform translate-x-full transition-transform duration-300 flex flex-col shadow-2xl">
+    
+    <!-- Topo da Sacola -->
+    <div class="p-5 border-b border-zborder flex items-center justify-between bg-zsurface">
+      <div class="flex items-center gap-2.5">
+        <i class="fa-solid fa-bag-shopping text-zgold text-lg"></i>
+        <h3 class="font-title text-base font-bold text-white">Sua Sacola Zero42</h3>
+        <span id="drawer-total-count" class="text-[11px] bg-zborder px-2 py-0.5 rounded-full text-slate-300 font-bold">0</span>
+      </div>
+      <button onclick="toggleCart(false)" class="w-8 h-8 rounded-lg bg-zborder/60 hover:bg-zborder text-slate-400 hover:text-white flex items-center justify-center transition-colors">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Lista de Itens -->
+    <div id="cart-items-wrapper" class="flex-1 overflow-y-auto p-4 space-y-3">
+      <!-- Injetado dinamicamente -->
+    </div>
+
+    <!-- Dados do Pedido & Envio WhatsApp -->
+    <div class="p-5 border-t border-zborder bg-zsurface/95 space-y-4">
+      
+      <!-- Seletor Entrega / Retirada -->
+      <div>
+        <span class="block text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">Forma de Retirada:</span>
+        <div class="grid grid-cols-2 gap-2 bg-zcard p-1 rounded-xl border border-zborder text-xs font-bold">
+          <button type="button" id="btn-mode-delivery" onclick="changeOrderMode('delivery')" class="py-2 rounded-lg transition-all bg-zgold text-black shadow">
+            <i class="fa-solid fa-motorcycle mr-1"></i> Tele-Entrega
+          </button>
+          <button type="button" id="btn-mode-pickup" onclick="changeOrderMode('pickup')" class="py-2 rounded-lg transition-all text-slate-400 hover:text-white">
+            <i class="fa-solid fa-store mr-1"></i> Retirar no BalcÃ£o
+          </button>
+        </div>
+      </div>
+
+      <!-- FormulÃ¡rio -->
+      <div class="space-y-2 text-xs">
+        <input 
+          type="text" 
+          id="client-name" 
+          placeholder="Seu Nome *" 
+          class="w-full bg-zcard border border-zborder rounded-xl px-3.5 py-2 text-white placeholder-slate-500 focus:outline-none focus:border-zgold"
+        />
+
+        <div id="wrapper-delivery-fields" class="space-y-2">
+          <input 
+            type="text" 
+            id="client-address" 
+            placeholder="EndereÃ§o Completo (Rua, NÂº, Bairro) *" 
+            class="w-full bg-zcard border border-zborder rounded-xl px-3.5 py-2 text-white placeholder-slate-500 focus:outline-none focus:border-zgold"
+          />
+          <input 
+            type="text" 
+            id="client-complement" 
+            placeholder="Complemento / Ponto de ReferÃªncia" 
+            class="w-full bg-zcard border border-zborder rounded-xl px-3.5 py-2 text-white placeholder-slate-500 focus:outline-none focus:border-zgold"
+          />
+        </div>
+
+        <select id="client-payment" class="w-full bg-zcard border border-zborder rounded-xl px-3.5 py-2 text-white text-xs focus:outline-none focus:border-zgold">
+          <option value="PIX">Pagamento: PIX InstantÃ¢neo</option>
+          <option value="CartÃ£o de CrÃ©dito">CartÃ£o de CrÃ©dito (Levar MÃ¡quina)</option>
+          <option value="CartÃ£o de DÃ©bito">CartÃ£o de DÃ©bito (Levar MÃ¡quina)</option>
+          <option value="Dinheiro">Dinheiro</option>
+        </select>
+
+        <input 
+          type="text" 
+          id="client-notes" 
+          placeholder="ObservaÃ§Ã£o (Ex: troco para 50, copos descartÃ¡veis, gelo, sabor do whisky)" 
+          class="w-full bg-zcard border border-zborder rounded-xl px-3.5 py-2 text-white placeholder-slate-500 focus:outline-none focus:border-zgold"
+        />
+      </div>
+
+      <!-- Resumo Valores -->
+      <div class="pt-2 border-t border-zborder/60 text-xs space-y-1.5">
+        <div class="flex justify-between text-slate-400">
+          <span>Subtotal bebidas:</span>
+          <span id="summary-subtotal" class="font-bold text-white">R$ 0,00</span>
+        </div>
+        <div id="summary-shipping-line" class="flex justify-between text-slate-400">
+          <span>Taxa de Entrega:</span>
+          <span id="summary-shipping" class="font-bold text-amber-400">R$ 7,00</span>
+        </div>
+        <div class="flex justify-between text-sm font-bold text-white pt-1">
+          <span>Total Geral:</span>
+          <span id="summary-total" class="font-title text-lg text-zneon">R$ 0,00</span>
+        </div>
+      </div>
+
+      <!-- BotÃ£o Enviar Pedido WhatsApp -->
+      <button 
+        onclick="submitOrderToWhatsApp()" 
+        class="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-950 transition-all active:scale-95"
+      >
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        <span>Enviar Pedido para o WhatsApp</span>
+      </button>
+
+      <p class="text-[10px] text-center text-slate-500">
+        O pedido serÃ¡ aberto no seu WhatsApp formatado e pronto para envio.
+      </p>
+    </div>
+
+  </aside>
+
+  <!-- Modal Detalhes do Produto -->
+  <div id="product-detail-modal" onclick="closeProductDetail()" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4">
+    <div id="modal-container" onclick="event.stopPropagation()" class="bg-zcard border border-zborder rounded-3xl max-w-lg w-full p-6 shadow-2xl transform scale-95 transition-transform duration-300 relative max-h-[90vh] overflow-y-auto">
+      <button onclick="closeProductDetail()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-zsurface text-slate-400 hover:text-white flex items-center justify-center z-10">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="modal-inner-content"></div>
     </div>
   </div>
-</section>
 
-<section class="contact" id="contato">
-  <div class="container">
-    <h2>FaÃ§a seu pedido</h2>
-    <p>Quer receber o catÃ¡logo e consultar disponibilidade? Fale com a 042 Distribuidora.</p>
-    <!-- TROQUE o nÃºmero abaixo pelo WhatsApp da distribuidora, no formato 55 + DDD + nÃºmero. -->
-    <a class="btn" href="https://wa.me/5542998413122?text=OlÃ¡!%20Vim%20pelo%20site%20da%20042%20Distribuidora%20e%20quero%20fazer%20um%20pedido." target="_blank" rel="noopener">Abrir WhatsApp</a>
+  <!-- Toast de NotificaÃ§Ã£o -->
+  <div id="app-toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-zcard border border-zgold text-white px-5 py-3 rounded-2xl shadow-2xl z-50 flex items-center gap-3 transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
+    <i class="fa-solid fa-circle-check text-zneon text-lg"></i>
+    <span id="toast-message" class="text-xs font-semibold">Produto adicionado Ã  sacola!</span>
   </div>
-</section>
-</main>
 
-<div class="notice">ðŸ”ž Venda de bebidas alcoÃ³licas proibida para menores de 18 anos. Beba com responsabilidade.</div>
-<footer>Â© 2026 042 Distribuidora â€” ConveniÃªncia & Delivery</footer>
+  <script>
+    // ConfiguraÃ§Ãµes Principais da Distribuidora
+    const ZERO42_WHATSAPP_NUMBER = "5542999999999"; // Substitua pelo nÃºmero com DDD da Zero42
+    const SHIPPING_COST = 7.00;
 
-<script>
-let carrinho = [];
+    // CatÃ¡logo 100% estruturado com as 10 imagens reais enviadas
+    const PRODUCTS_CATALOG = [
+      {
+        id: 1,
+        name: "Cerveja Praya Lager Sem GlÃºten",
+        subtitle: "ContÃ©m 6 garrafas de 330ml â€¢ Puro Malte",
+        category: "cervejas",
+        price: 59.90,
+        volume: "Pack 6 x 330ml",
+        alcohol: "4,7% Vol.",
+        badge: "Sem GlÃºten",
+        badgeColor: "bg-cyan-950 text-cyan-400 border-cyan-700",
+        image: "photo_5003775425880198253_x.jpg",
+        description: "Leve, refrescante e feita para os melhores momentos! A cerveja perfeita para brindar seus melhores momentos. Cerveja puro malte sem glÃºten entregue trincando.",
+        specs: ["Sem GlÃºten", "Puro Malte", "Extra Gelada", "Pack com 6 garrafas de 330ml"]
+      },
+      {
+        id: 2,
+        name: "Heineken Ultimate Puro Malte Sem GlÃºten",
+        subtitle: "30% Menos Calorias â€¢ Pack 6 garrafas de 330ml",
+        category: "cervejas",
+        price: 54.90,
+        volume: "Pack 6 x 330ml",
+        alcohol: "3,5% Vol.",
+        badge: "30% Menos Calorias",
+        badgeColor: "bg-emerald-950 text-emerald-400 border-emerald-700",
+        image: "photo_5003775425880198252_x.jpg",
+        description: "Experimente o sabor Ãºnico da Heineken Ultimate! Mais leve, mesmo sabor Heineken, sem glÃºten e com 30% menos calorias.",
+        specs: ["30% Menos Calorias", "Sem GlÃºten", "Sabor IncomparÃ¡vel", "JÃ¡ disponÃ­vel na ConveniÃªncia Zero42"]
+      },
+      {
+        id: 3,
+        name: "Jack James Vikings Malt Whisky 900ml",
+        subtitle: "Sabores para Lendas: Loki, Freya e Ragnar",
+        category: "destilados",
+        price: 79.90,
+        volume: "Garrafa 900ml",
+        alcohol: "38% Vol.",
+        badge: "Malt Whisky",
+        badgeColor: "bg-amber-950 text-amber-300 border-amber-700",
+        image: "photo_5003775425880198251_x.jpg",
+        description: "Sabores Ãºnicos para momentos Ã©picos! Escolha nas observaÃ§Ãµes entre: Loki (Chocolate Preto, CafÃ© & Cassis), Freya (Chocolate Branco, Baunilha & Mel) ou Ragnar (Canela, Pimenta, Gengibre & Caramelo).",
+        specs: ["Malt Whisky LendÃ¡rio", "Ultra Blend Exclusivo", "Garrafa 900ml", "Indique a versÃ£o desejada"]
+      },
+      {
+        id: 4,
+        name: "A Dupla do Momento: Busca Brisa & Bob Pinga",
+        subtitle: "Dois sabores, uma experiÃªncia incrÃ­vel!",
+        category: "especiais",
+        price: 68.00,
+        volume: "1L / 975ml",
+        alcohol: "13,5% a 26% Vol.",
+        badge: "Dupla do Momento",
+        badgeColor: "bg-purple-950 text-purple-300 border-purple-700",
+        image: "photo_5003775425880198250_x.jpg",
+        description: "Experimente e viaje nessa dupla inesquecÃ­vel! Busca Brisa Psico Spirit (exÃ³tico, refrescante e cheio de boas energias) e Bob Pinga (Tequila + Rum + Ervas, marcante e com o astral das ervas).",
+        specs: ["Busca Brisa Psico Spirit 1L", "Bob Pinga Tequila+Rum+Ervas 975ml", "Bebida para momentos especiais"]
+      },
+      {
+        id: 5,
+        name: "Chopp Premium de Vinho HÃ¡zbier 1,5L",
+        subtitle: "Growler de 1,5 Litro â€¢ EdiÃ§Ã£o Especial",
+        category: "cervejas",
+        price: 34.90,
+        volume: "Growler 1,5L",
+        alcohol: "5,5% Vol.",
+        badge: "Chopp de Vinho",
+        badgeColor: "bg-rose-950 text-rose-300 border-rose-700",
+        image: "photo_5003775425880198249_x.jpg",
+        description: "VocÃªs pediram e nÃ³s buscamos para vocÃªs! Sabor Ãºnico e sofisticado, Chopp leve, aromÃ¡tico e refrescante, produzido com vinho selecionado de alta qualidade.",
+        specs: ["Produzido com Vinho Selecionado", "Growler 1,5L", "Novidade Exclusiva", "Zero42 ConveniÃªncia"]
+      },
+      {
+        id: 6,
+        name: "Tequila JosÃ© Cuervo Especial Silver 750ml",
+        subtitle: "Blue Agave Tradicional Mexicana â€¢ 100% Original",
+        category: "destilados",
+        price: 119.90,
+        volume: "Garrafa 750ml",
+        alcohol: "38% Vol.",
+        badge: "Tequila Tradicional",
+        badgeColor: "bg-blue-950 text-blue-300 border-blue-700",
+        image: "photo_5003775425880198248_y.jpg",
+        description: "Feito com Blue Agave com sabor suave e equilibrado. Tequila mexicano de tradiÃ§Ã£o desde 1795, perfeito para shots ou drinks inesquecÃ­veis como Margaritas.",
+        specs: ["Blue Agave", "38% Teor AlcoÃ³lico", "TradiÃ§Ã£o Mexicana 1795", "Garrafa 750ml"]
+      },
+      {
+        id: 7,
+        name: "Growler Chopp Artesanal Insana",
+        subtitle: "Leve sua Insana pra onde quiser! Gelado e prÃ¡tico",
+        category: "cervejas",
+        price: 32.00,
+        volume: "Growler 1L / 2L",
+        alcohol: "4,5% a 6,0% Vol.",
+        badge: "Chopp Insana",
+        badgeColor: "bg-yellow-950 text-yellow-300 border-yellow-700",
+        image: "photo_5003775425880198247_x.jpg",
+        description: "Sua cerveja, seu momento, mais gelada e do seu jeito! DisponÃ­vel em versÃµes Pilsen, Session IPA e Munich IPA em growler tÃ©rmico lacrado.",
+        specs: ["PrÃ¡tico & Gelado", "Do Seu Jeito", "Chopp Artesanal Puro Malte", "DisponÃ­vel na Zero42"]
+      },
+      {
+        id: 8,
+        name: "Lagunitas DayTime Session IPA 350ml",
+        subtitle: "Lata 350ml â€¢ Born in California",
+        category: "cervejas",
+        price: 13.90,
+        volume: "Lata 350ml",
+        alcohol: "4,0% Vol.",
+        badge: "Session IPA",
+        badgeColor: "bg-teal-950 text-teal-300 border-teal-700",
+        image: "photo_5003775425880198246_y.jpg",
+        description: "Leve, refrescante e cheia de sabor! A IPA perfeita para qualquer momento do dia, e gelada Ã© ainda melhor. PeÃ§a jÃ¡ a sua!",
+        specs: ["Session IPA Californiana", "4,0% Teor AlcoÃ³lico", "Lata 350ml", "Amargor Suave & AromÃ¡tico"]
+      },
+      {
+        id: 9,
+        name: "Licor Ballena Original Cream Tequila 750ml",
+        subtitle: "Cremosa, Ãšnica e InesquecÃ­vel â€¢ Garrafa Rosa",
+        category: "especiais",
+        price: 139.90,
+        volume: "Garrafa 750ml",
+        alcohol: "8,7% Vol.",
+        badge: "SensaÃ§Ã£o Rosa",
+        badgeColor: "bg-pink-950 text-pink-300 border-pink-700",
+        image: "photo_5003775425880198245_y.jpg",
+        description: "Cremosa, Ãºnica e inesquecÃ­vel! Licor fino de leite com tequila mexicana original. Beba bem gelado para a melhor experiÃªncia sensorial.",
+        specs: ["Cremosa & Suave", "Feita com Tequila", "Garrafa 750ml", "Beba Bem Gelado"]
+      },
+      {
+        id: 10,
+        name: "Johnnie Walker Blonde Blended Scotch 750ml",
+        subtitle: "Leve, suave e feito para bons momentos!",
+        category: "destilados",
+        price: 94.90,
+        volume: "Garrafa 750ml",
+        alcohol: "37,5% Vol.",
+        badge: "Perfeito p/ Drinks",
+        badgeColor: "bg-amber-950 text-amber-300 border-amber-700",
+        image: "photo_5003775425880198244_y.jpg",
+        description: "Whisky escocÃªs moderno com sabor suave e notas frutadas. Ideal para preparar drinks refrescantes com refrigerante cÃ­trico e gelo.",
+        specs: ["Blended Scotch Whisky", "Sabor Suave & Refrescante", "Perfeito para Drinks", "Delivery RÃ¡pido e Gelado"]
+      }
+    ];
 
-function adicionarCarrinho(produto){
-    carrinho.push(produto);
-    atualizarCarrinho();
-    alert(produto + " adicionado ao carrinho!");
-}
+    let shoppingCart = [];
+    let selectedCategory = 'todos';
+    let currentOrderMode = 'delivery';
 
-function atualizarCarrinho(){
-    document.getElementById("qtdCarrinho").innerText = carrinho.length;
-}
+    // Renderizador do CatÃ¡logo
+    function displayProducts(items) {
+      const gridContainer = document.getElementById('products-catalog-grid');
+      const emptyState = document.getElementById('search-empty-state');
 
-function finalizarPedido(){
-    if(carrinho.length === 0){
-        alert("Seu carrinho estÃ¡ vazio!");
+      if (!items || items.length === 0) {
+        gridContainer.innerHTML = '';
+        emptyState.classList.remove('hidden');
         return;
+      }
+      emptyState.classList.add('hidden');
+
+      gridContainer.innerHTML = items.map(product => `
+        <div class="card-zoom rounded-3xl bg-zcard border border-zborder flex flex-col justify-between overflow-hidden group">
+          
+          <!-- Imagem do Produto Fornecida -->
+          <div onclick="showProductDetails(${product.id})" class="cursor-pointer relative aspect-square w-full bg-black/60 overflow-hidden flex items-center justify-center p-3">
+            <img 
+              src="${product.image}" 
+              alt="${product.name}" 
+              class="img-scale w-full h-full object-contain rounded-2xl"
+              onerror="this.onerror=null; this.src='https://placehold.co/500x500/161c28/f59e0b?text=${encodeURIComponent(product.name)}';"
+            />
+
+            <!-- Badge Categoria / Destaque -->
+            <div class="absolute top-3.5 left-3.5">
+              <span class="text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-md border ${product.badgeColor} shadow-md backdrop-blur-md">
+                ${product.badge}
+              </span>
+            </div>
+
+            <div class="absolute bottom-3 right-3 text-[10px] text-slate-300 bg-black/80 px-2.5 py-1 rounded-lg backdrop-blur-md border border-white/10 flex items-center gap-1">
+              <i class="fa-solid fa-magnifying-glass-plus text-zgold"></i> Ver
+            </div>
+          </div>
+
+          <!-- ConteÃºdo -->
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <div class="flex items-center justify-between text-[11px] text-slate-400 mb-1 font-medium">
+                <span>${product.volume}</span>
+                <span class="text-amber-400 font-bold">${product.alcohol}</span>
+              </div>
+              <h3 onclick="showProductDetails(${product.id})" class="cursor-pointer font-title text-base font-bold text-white hover:text-zneon transition-colors leading-snug">
+                ${product.name}
+              </h3>
+              <p class="text-xs text-slate-400 mt-1 line-clamp-2">
+                ${product.subtitle}
+              </p>
+            </div>
+
+            <!-- PreÃ§o e BotÃ£o Adicionar -->
+            <div class="pt-3 border-t border-zborder flex items-center justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-slate-500 block">PreÃ§o</span>
+                <span class="font-title text-lg font-black text-zgold">R$ ${product.price.toFixed(2).replace('.', ',')}</span>
+              </div>
+
+              <button 
+                onclick="addItemToCart(${product.id})" 
+                class="px-3.5 py-2.5 rounded-xl bg-zgold hover:bg-zneon text-black text-xs font-extrabold transition-all flex items-center gap-1.5 shadow active:scale-95"
+                title="Adicionar Ã  Sacola"
+              >
+                <i class="fa-solid fa-cart-plus"></i>
+                <span>Adicionar</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      `).join('');
     }
 
-    let mensagem = "OlÃ¡! Gostaria de fazer o seguinte pedido:%0A%0A";
-    carrinho.forEach((item,index)=>{
-        mensagem += (index+1)+". "+item+"%0A";
-    });
+    // Filtragem por Categoria
+    function applyCategoryFilter(cat) {
+      selectedCategory = cat;
 
-    window.open("https://wa.me/5542998413122?text="+mensagem,"_blank");
-}
-</script>
+      document.querySelectorAll('.filter-chip').forEach(btn => {
+        btn.classList.remove('active', 'bg-zgold', 'text-black');
+        btn.classList.add('bg-zsurface', 'text-slate-300');
+      });
+      if (event && event.currentTarget) {
+        event.currentTarget.classList.add('active', 'bg-zgold', 'text-black');
+        event.currentTarget.classList.remove('bg-zsurface', 'text-slate-300');
+      }
+
+      if (cat === 'todos') {
+        displayProducts(PRODUCTS_CATALOG);
+      } else {
+        displayProducts(PRODUCTS_CATALOG.filter(p => p.category === cat));
+      }
+    }
+
+    // Busca de Produtos
+    function searchProducts(query) {
+      const q = query.toLowerCase().trim();
+      const clearBtn = document.getElementById('clearSearchBtn');
+      if (clearBtn) {
+        if (q.length > 0) clearBtn.classList.remove('hidden');
+        else clearBtn.classList.add('hidden');
+      }
+
+      const results = PRODUCTS_CATALOG.filter(p => 
+        p.name.toLowerCase().includes(q) || 
+        p.subtitle.toLowerCase().includes(q) ||
+        p.description.toLowerCase().includes(q)
+      );
+      displayProducts(results);
+    }
+
+    function clearSearchInput() {
+      const el1 = document.getElementById('searchInput');
+      const el2 = document.getElementById('searchInputMobile');
+      if (el1) el1.value = '';
+      if (el2) el2.value = '';
+      const clearBtn = document.getElementById('clearSearchBtn');
+      if (clearBtn) clearBtn.classList.add('hidden');
+      applyCategoryFilter(selectedCategory);
+    }
+
+    // Detalhes do Produto Modal
+    function showProductDetails(id) {
+      const item = PRODUCTS_CATALOG.find(p => p.id === id);
+      if (!item) return;
+
+      const modalInner = document.getElementById('modal-inner-content');
+      modalInner.innerHTML = `
+        <div class="space-y-4">
+          <div class="w-full aspect-square max-h-72 rounded-2xl bg-black border border-zborder overflow-hidden p-3 flex items-center justify-center relative">
+            <span class="absolute top-3 left-3 text-[10px] font-black uppercase px-2.5 py-1 rounded border ${item.badgeColor}">
+              ${item.badge}
+            </span>
+            <img 
+              src="${item.image}" 
+              alt="${item.name}" 
+              class="w-full h-full object-contain"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x600/161c28/f59e0b?text=${encodeURIComponent(item.name)}';"
+            />
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between text-xs text-amber-400 font-bold mb-1">
+              <span>${item.volume}</span>
+              <span>${item.alcohol}</span>
+            </div>
+            <h3 class="font-title text-xl font-bold text-white">${item.name}</h3>
+            <p class="text-xs text-slate-400 mt-1">${item.subtitle}</p>
+            <p class="text-xs text-slate-300 mt-3 leading-relaxed">${item.description}</p>
+          </div>
+
+          <div class="space-y-1.5 pt-2">
+            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Destaques:</span>
+            <div class="flex flex-wrap gap-1.5">
+              ${item.specs.map(spec => `
+                <span class="text-[11px] bg-zsurface border border-zborder px-2.5 py-1 rounded-lg text-slate-300">
+                  âœ“ ${spec}
+                </span>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-zborder flex items-center justify-between">
+            <div>
+              <span class="text-[10px] text-slate-500 uppercase block font-bold">Valor</span>
+              <span class="font-title text-2xl font-black text-zneon">R$ ${item.price.toFixed(2).replace('.', ',')}</span>
+            </div>
+            
+            <button onclick="addItemToCart(${item.id}); closeProductDetail();" class="px-5 py-3 rounded-xl bg-zgold hover:bg-zneon text-black font-extrabold text-xs transition-all flex items-center gap-2 shadow-lg active:scale-95">
+              <i class="fa-solid fa-cart-plus"></i>
+              <span>Adicionar Ã  Sacola</span>
+            </button>
+          </div>
+        </div>
+      `;
+
+      const overlay = document.getElementById('product-detail-modal');
+      const box = document.getElementById('modal-container');
+      overlay.classList.remove('opacity-0', 'pointer-events-none');
+      box.classList.remove('scale-95');
+      box.classList.add('scale-100');
+    }
+
+    function closeProductDetail() {
+      const overlay = document.getElementById('product-detail-modal');
+      const box = document.getElementById('modal-container');
+      overlay.classList.add('opacity-0', 'pointer-events-none');
+      box.classList.add('scale-95');
+      box.classList.remove('scale-100');
+    }
+
+    // GestÃ£o do Carrinho de Compras
+    function addItemToCart(productId) {
+      const product = PRODUCTS_CATALOG.find(p => p.id === productId);
+      if (!product) return;
+
+      const itemInCart = shoppingCart.find(i => i.id === productId);
+      if (itemInCart) {
+        itemInCart.quantity += 1;
+      } else {
+        shoppingCart.push({ ...product, quantity: 1 });
+      }
+      refreshCartState();
+      triggerToast(`"${product.name}" adicionado Ã  sacola!`);
+    }
+
+    function adjustQuantity(id, delta) {
+      const item = shoppingCart.find(i => i.id === id);
+      if (!item) return;
+
+      item.quantity += delta;
+      if (item.quantity <= 0) {
+        shoppingCart = shoppingCart.filter(i => i.id !== id);
+      }
+      refreshCartState();
+    }
+
+    function changeOrderMode(mode) {
+      currentOrderMode = mode;
+      const btnDelivery = document.getElementById('btn-mode-delivery');
+      const btnPickup = document.getElementById('btn-mode-pickup');
+      const addressFields = document.getElementById('wrapper-delivery-fields');
+      const shippingRow = document.getElementById('summary-shipping-line');
+
+      if (mode === 'delivery') {
+        btnDelivery.className = "py-2 rounded-lg transition-all bg-zgold text-black shadow";
+        btnPickup.className = "py-2 rounded-lg transition-all text-slate-400 hover:text-white";
+        addressFields.classList.remove('hidden');
+        shippingRow.classList.remove('hidden');
+      } else {
+        btnPickup.className = "py-2 rounded-lg transition-all bg-zgold text-black shadow";
+        btnDelivery.className = "py-2 rounded-lg transition-all text-slate-400 hover:text-white";
+        addressFields.classList.add('hidden');
+        shippingRow.classList.add('hidden');
+      }
+      refreshCartState();
+    }
+
+    function refreshCartState() {
+      const container = document.getElementById('cart-items-wrapper');
+      const headerBadge = document.getElementById('header-cart-badge');
+      const drawerBadge = document.getElementById('drawer-total-count');
+      const subtotalElem = document.getElementById('summary-subtotal');
+      const shippingElem = document.getElementById('summary-shipping');
+      const totalElem = document.getElementById('summary-total');
+
+      const totalItemsCount = shoppingCart.reduce((acc, curr) => acc + curr.quantity, 0);
+      headerBadge.innerText = totalItemsCount;
+      drawerBadge.innerText = `${totalItemsCount} ${totalItemsCount === 1 ? 'item' : 'itens'}`;
+
+      if (shoppingCart.length === 0) {
+        container.innerHTML = `
+          <div class="h-64 flex flex-col items-center justify-center text-center p-6 space-y-2 text-slate-400">
+            <i class="fa-solid fa-bag-shopping text-4xl text-zborder mb-2"></i>
+            <p class="text-sm font-bold text-white">Sua sacola estÃ¡ vazia</p>
+            <p class="text-xs">Explore o catÃ¡logo e adicione suas bebidas preferidas!</p>
+          </div>
+        `;
+        subtotalElem.innerText = "R$ 0,00";
+        totalElem.innerText = "R$ 0,00";
+        return;
+      }
+
+      let subtotal = 0;
+      container.innerHTML = shoppingCart.map(item => {
+        const itemSubtotal = item.price * item.quantity;
+        subtotal += itemSubtotal;
+
+        return `
+          <div class="flex items-center gap-3 bg-zsurface p-3 rounded-2xl border border-zborder">
+            <div class="w-12 h-12 rounded-xl bg-black border border-zborder overflow-hidden shrink-0 p-1 flex items-center justify-center">
+              <img 
+                src="${item.image}" 
+                alt="${item.name}" 
+                class="w-full h-full object-contain"
+                onerror="this.onerror=null; this.src='https://placehold.co/100x100/161c28/f59e0b?text=Bebida';"
+              />
+            </div>
+            
+            <div class="flex-1 min-w-0">
+              <h4 class="text-xs font-bold text-white truncate">${item.name}</h4>
+              <p class="text-[11px] text-zgold font-bold">R$ ${item.price.toFixed(2).replace('.', ',')}</p>
+              
+              <div class="flex items-center gap-2 mt-1.5">
+                <button onclick="adjustQuantity(${item.id}, -1)" class="w-6 h-6 rounded bg-zborder text-white flex items-center justify-center text-xs hover:bg-zborder/80">
+                  -
+                </button>
+                <span class="text-xs font-bold text-white">${item.quantity}</span>
+                <button onclick="adjustQuantity(${item.id}, 1)" class="w-6 h-6 rounded bg-zborder text-white flex items-center justify-center text-xs hover:bg-zborder/80">
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div class="text-right shrink-0">
+              <span class="text-xs font-bold text-white block">R$ ${itemSubtotal.toFixed(2).replace('.', ',')}</span>
+              <button onclick="adjustQuantity(${item.id}, -${item.quantity})" class="text-[10px] text-rose-400 hover:underline mt-1">
+                Remover
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const shipping = currentOrderMode === 'delivery' ? SHIPPING_COST : 0;
+      const grandTotal = subtotal + shipping;
+
+      subtotalElem.innerText = `R$ ${subtotal.toFixed(2).replace('.', ',')}`;
+      shippingElem.innerText = currentOrderMode === 'delivery' ? `R$ ${shipping.toFixed(2).replace('.', ',')}` : 'GrÃ¡tis (BalcÃ£o)';
+      totalElem.innerText = `R$ ${grandTotal.toFixed(2).replace('.', ',')}`;
+    }
+
+    function toggleCart(isOpen) {
+      const drawer = document.getElementById('cart-drawer');
+      const overlay = document.getElementById('cart-overlay');
+      if (isOpen) {
+        drawer.classList.remove('translate-x-full');
+        overlay.classList.remove('opacity-0', 'pointer-events-none');
+      } else {
+        drawer.classList.add('translate-x-full');
+        overlay.classList.add('opacity-0', 'pointer-events-none');
+      }
+    }
+
+    function triggerToast(text) {
+      const toast = document.getElementById('app-toast');
+      const toastMsg = document.getElementById('toast-message');
+      toastMsg.innerText = text;
+      toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+      }, 2500);
+    }
+
+    // Montagem e Envio do Pedido no WhatsApp
+    function submitOrderToWhatsApp() {
+      if (shoppingCart.length === 0) {
+        triggerToast("Adicione ao menos uma bebida na sacola!");
+        return;
+      }
+
+      const clientName = document.getElementById('client-name').value.trim();
+      const clientAddress = document.getElementById('client-address').value.trim();
+      const clientComp = document.getElementById('client-complement').value.trim();
+      const paymentMode = document.getElementById('client-payment').value;
+      const clientNotes = document.getElementById('client-notes').value.trim();
+
+      if (!clientName) {
+        triggerToast("Por favor, digite seu nome.");
+        document.getElementById('client-name').focus();
+        return;
+      }
+
+      if (currentOrderMode === 'delivery' && !clientAddress) {
+        triggerToast("Por favor, informe o endereÃ§o de entrega.");
+        document.getElementById('client-address').focus();
+        return;
+      }
+
+      let subtotal = 0;
+      let itemsFormattedText = "";
+
+      shoppingCart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        subtotal += itemTotal;
+        itemsFormattedText += `â–ª ${item.quantity}x ${item.name} (${item.volume}) - R$ ${itemTotal.toFixed(2).replace('.', ',')}\n`;
+      });
+
+      const shipping = currentOrderMode === 'delivery' ? SHIPPING_COST : 0;
+      const totalPagar = subtotal + shipping;
+
+      let msg = `ðŸ‘‘ *NOVO PEDIDO - ZERO42 CONVENIÃŠNCIA & DELIVERY*\n`;
+      msg += `-------------------------------------------\n`;
+      msg += `*Cliente:* ${clientName}\n`;
+      msg += `*Tipo:* ${currentOrderMode === 'delivery' ? 'ðŸ›µ Tele-Entrega' : 'ðŸ¬ Retirar no BalcÃ£o'}\n`;
+
+      if (currentOrderMode === 'delivery') {
+        msg += `*EndereÃ§o:* ${clientAddress}\n`;
+        if (clientComp) msg += `*ReferÃªncia:* ${clientComp}\n`;
+      }
+
+      msg += `*Pagamento:* ${paymentMode}\n`;
+      if (clientNotes) msg += `*ObservaÃ§Ãµes:* ${clientNotes}\n`;
+
+      msg += `\n*ITENS DO PEDIDO:* \n${itemsFormattedText}`;
+      msg += `-------------------------------------------\n`;
+      msg += `*Subtotal:* R$ ${subtotal.toFixed(2).replace('.', ',')}\n`;
+      if (currentOrderMode === 'delivery') {
+        msg += `*Taxa de Entrega:* R$ ${shipping.toFixed(2).replace('.', ',')}\n`;
+      }
+      msg += `*TOTAL:* R$ ${totalPagar.toFixed(2).replace('.', ',')}\n`;
+      msg += `-------------------------------------------\n`;
+      msg += `_OlÃ¡ Zero42! Aguardo a confirmaÃ§Ã£o do meu pedido._`;
+
+      const encodedMessage = encodeURIComponent(msg);
+      window.open(`https://wa.me/${ZERO42_WHATSAPP_NUMBER}?text=${encodedMessage}`, '_blank');
+    }
+
+    // InicializaÃ§Ã£o da AplicaÃ§Ã£o
+    window.addEventListener('DOMContentLoaded', () => {
+      displayProducts(PRODUCTS_CATALOG);
+      refreshCartState();
+    });
+  </script>
 </body>
 </html>
