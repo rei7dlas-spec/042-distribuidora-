@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="042 Distribuidora — bebidas, energéticos e conveniência com delivery.">
-<title>042 Distribuidora | Conveniência & Delivery</title>
+<meta name="description" content="042 Distribuidora â€” bebidas, energÃ©ticos e conveniÃªncia com delivery.">
+<title>042 Distribuidora | ConveniÃªncia & Delivery</title>
 <style>
 :root{--black:#090909;--black2:#121212;--gold:#d8ad32;--gold2:#f1cf63;--white:#f7f7f7;--muted:#b8b8b8}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -66,7 +66,7 @@ footer{border-top:1px solid #242424;padding:30px 20px;color:#888;text-align:cent
   <div class="nav">
     <a class="brand" href="#">
       <img src="logo.jpg" alt="Logo 042 Distribuidora">
-      <div><span>042 DISTRIBUIDORA</span><small>CONVENIÊNCIA • DELIVERY</small></div>
+      <div><span>042 DISTRIBUIDORA</span><small>CONVENIÃŠNCIA â€¢ DELIVERY</small></div>
     </a>
     <nav>
       <a href="#categorias">Categorias</a>
@@ -74,16 +74,16 @@ footer{border-top:1px solid #242424;padding:30px 20px;color:#888;text-align:cent
       <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
     </nav>
-    <a class="btn" href="#contato">Pedir agora</a>
+    <a class="btn" onclick="finalizarPedido()">ðŸ›’ Carrinho (<span id="qtdCarrinho">0</span>)</a>
   </div>
 </header>
 
 <main>
 <section class="hero">
   <div class="hero-content">
-    <div class="kicker">Conveniencia • Delivery • 042</div>
-    <h1>Sua bebida favorita,<br><span>do nosso estoque</span> até você.</h1>
-    <p>Conheça a 042 Distribuidora. Bebidas, cervejas, energéticos e itens de conveniência para o seu rolê.</p>
+    <div class="kicker">Conveniencia â€¢ Delivery â€¢ 042</div>
+    <h1>Sua bebida favorita,<br><span>do nosso estoque</span> atÃ© vocÃª.</h1>
+    <p>ConheÃ§a a 042 Distribuidora. Bebidas, cervejas, energÃ©ticos e itens de conveniÃªncia para o seu rolÃª.</p>
     <div class="hero-actions">
       <a class="btn" href="#produtos">Ver produtos</a>
       <a class="btn secondary" href="#contato">Falar no WhatsApp</a>
@@ -95,26 +95,26 @@ footer{border-top:1px solid #242424;padding:30px 20px;color:#888;text-align:cent
   <div class="container">
     <div class="section-title"><h2>Categorias</h2><p>Encontre o que combina com o seu momento.</p></div>
     <div class="categories">
-      <div class="cat"><div class="icon">🥃</div><h3>Whiskies</h3><p>Rótulos conhecidos e opções variadas.</p></div>
-      <div class="cat"><div class="icon">🍺</div><h3>Cervejas</h3><p>Long neck, lata e outras opções.</p></div>
-      <div class="cat"><div class="icon">⚡</div><h3>Energéticos</h3><p>Monster, Red Bull e mais.</p></div>
-      <div class="cat"><div class="icon">🥤</div><h3>Conveniência</h3><p>Refrigerantes, água, gelo e outros.</p></div>
+      <div class="cat"><div class="icon">ðŸ¥ƒ</div><h3>Whiskies</h3><p>RÃ³tulos conhecidos e opÃ§Ãµes variadas.</p></div>
+      <div class="cat"><div class="icon">ðŸº</div><h3>Cervejas</h3><p>Long neck, lata e outras opÃ§Ãµes.</p></div>
+      <div class="cat"><div class="icon">âš¡</div><h3>EnergÃ©ticos</h3><p>Monster, Red Bull e mais.</p></div>
+      <div class="cat"><div class="icon">ðŸ¥¤</div><h3>ConveniÃªncia</h3><p>Refrigerantes, Ã¡gua, gelo e outros.</p></div>
     </div>
   </div>
 </section>
 
 <section class="products" id="produtos">
   <div class="container">
-    <div class="section-title"><h2>Produtos em destaque</h2><p>Alguns dos produtos que podem fazer parte do catálogo da 042.</p></div>
+    <div class="section-title"><h2>Produtos em destaque</h2><p>Alguns dos produtos que podem fazer parte do catÃ¡logo da 042.</p></div>
     <div class="grid">
-      <article class="card"><div class="product-art"><div class="bottle">🥃</div></div><div class="product-body"><small>WHISKY</small><h3>Jack Daniel's</h3><p>Whisky clássico para sua seleção.</p><a class="order" href="#contato">Consultar</a></div></article>
-      <article class="card"><div class="product-art"><div class="bottle">🍺</div></div><div class="product-body"><small>CERVEJA</small><h3>Heineken</h3><p>Opção para gelar e aproveitar.</p><a class="order" href="#contato">Consultar</a></div></article>
-      <article class="card"><div class="product-art"><div class="bottle">🍺</div></div><div class="product-body"><small>CERVEJA</small><h3>Skol</h3><p>Uma das opções tradicionais do catálogo.</p><a class="order" href="#contato">Consultar</a></div></article>
-      <article class="card"><div class="product-art"><div class="bottle">🍺</div></div><div class="product-body"><small>CERVEJA</small><h3>Brahma</h3><p>Clássico para diferentes ocasiões.</p><a class="order" href="#contato">Consultar</a></div></article>
-      <article class="card"><div class="product-art"><div class="bottle">⚡</div></div><div class="product-body"><small>ENERGÉTICO</small><h3>Monster</h3><p>Energia para acompanhar o seu dia.</p><a class="order" href="#contato">Consultar</a></div></article>
-      <article class="card"><div class="product-art"><div class="bottle">⚡</div></div><div class="product-body"><small>ENERGÉTICO</small><h3>Red Bull</h3><p>Uma opção conhecida de energético.</p><a class="order" href="#contato">Consultar</a></div></article>
-      <article class="card"><div class="product-art"><div class="bottle">🍺</div></div><div class="product-body"><small>CERVEJA</small><h3>Amstel</h3><p>Mais uma opção para o seu pedido.</p><a class="order" href="#contato">Consultar</a></div></article>
-      <article class="card"><div class="product-art"><div class="bottle">🥤</div></div><div class="product-body"><small>CONVENIÊNCIA</small><h3>Outros produtos</h3><p>Água, gelo, refrigerantes e muito mais.</p><a class="order" href="#contato">Consultar</a></div></article>
+      <article class="card"><div class="product-art"><div class="bottle">ðŸ¥ƒ</div></div><div class="product-body"><small>WHISKY</small><h3>Jack Daniel's</h3><p>Whisky clÃ¡ssico para sua seleÃ§Ã£o.</p><a class="order" href="#" onclick="adicionarCarrinho('Jack Daniel's')">Adicionar ao Carrinho</a></div></article>
+      <article class="card"><div class="product-art"><div class="bottle">ðŸº</div></div><div class="product-body"><small>CERVEJA</small><h3>Heineken</h3><p>OpÃ§Ã£o para gelar e aproveitar.</p><a class="order" href="#" onclick="adicionarCarrinho('Heineken')">Adicionar ao Carrinho</a></div></article>
+      <article class="card"><div class="product-art"><div class="bottle">ðŸº</div></div><div class="product-body"><small>CERVEJA</small><h3>Skol</h3><p>Uma das opÃ§Ãµes tradicionais do catÃ¡logo.</p><a class="order" href="#" onclick="adicionarCarrinho('Skol')">Adicionar ao Carrinho</a></div></article>
+      <article class="card"><div class="product-art"><div class="bottle">ðŸº</div></div><div class="product-body"><small>CERVEJA</small><h3>Brahma</h3><p>ClÃ¡ssico para diferentes ocasiÃµes.</p><a class="order" href="#" onclick="adicionarCarrinho('Brahma')">Adicionar ao Carrinho</a></div></article>
+      <article class="card"><div class="product-art"><div class="bottle">âš¡</div></div><div class="product-body"><small>ENERGÃ‰TICO</small><h3>Monster</h3><p>Energia para acompanhar o seu dia.</p><a class="order" href="#" onclick="adicionarCarrinho('Monster')">Adicionar ao Carrinho</a></div></article>
+      <article class="card"><div class="product-art"><div class="bottle">âš¡</div></div><div class="product-body"><small>ENERGÃ‰TICO</small><h3>Red Bull</h3><p>Uma opÃ§Ã£o conhecida de energÃ©tico.</p><a class="order" href="#" onclick="adicionarCarrinho('Red Bull')">Adicionar ao Carrinho</a></div></article>
+      <article class="card"><div class="product-art"><div class="bottle">ðŸº</div></div><div class="product-body"><small>CERVEJA</small><h3>Amstel</h3><p>Mais uma opÃ§Ã£o para o seu pedido.</p><a class="order" href="#" onclick="adicionarCarrinho('Amstel')">Adicionar ao Carrinho</a></div></article>
+      <article class="card"><div class="product-art"><div class="bottle">ðŸ¥¤</div></div><div class="product-body"><small>CONVENIÃŠNCIA</small><h3>Outros produtos</h3><p>Ãgua, gelo, refrigerantes e muito mais.</p><a class="order" href="#" onclick="adicionarCarrinho('Outros produtos')">Adicionar ao Carrinho</a></div></article>
     </div>
   </div>
 </section>
@@ -123,32 +123,60 @@ footer{border-top:1px solid #242424;padding:30px 20px;color:#888;text-align:cent
   <div class="container about">
     <div class="about-box">
       <h2>042 Distribuidora</h2>
-      <p>Uma experiência simples para você encontrar suas bebidas e itens de conveniência e fazer seu pedido com praticidade.</p>
+      <p>Uma experiÃªncia simples para vocÃª encontrar suas bebidas e itens de conveniÃªncia e fazer seu pedido com praticidade.</p>
       <div class="features">
-        <div class="feature"><b>🚚 Delivery</b><span>Consulte a área e condições de entrega.</span></div>
-        <div class="feature"><b>📦 Variedade</b><span>Diferentes categorias em um só lugar.</span></div>
-        <div class="feature"><b>💬 Atendimento</b><span>Pedido e dúvidas pelo WhatsApp.</span></div>
-        <div class="feature"><b>⭐ Qualidade</b><span>Produtos de marcas conhecidas.</span></div>
+        <div class="feature"><b>ðŸšš Delivery</b><span>Consulte a Ã¡rea e condiÃ§Ãµes de entrega.</span></div>
+        <div class="feature"><b>ðŸ“¦ Variedade</b><span>Diferentes categorias em um sÃ³ lugar.</span></div>
+        <div class="feature"><b>ðŸ’¬ Atendimento</b><span>Pedido e dÃºvidas pelo WhatsApp.</span></div>
+        <div class="feature"><b>â­ Qualidade</b><span>Produtos de marcas conhecidas.</span></div>
       </div>
     </div>
     <div class="about-box">
-      <h2>Seu pedido começa aqui.</h2>
-      <p>Escolha os produtos, chame a 042 e confirme disponibilidade, preços, formas de pagamento e entrega.</p>
+      <h2>Seu pedido comeÃ§a aqui.</h2>
+      <p>Escolha os produtos, chame a 042 e confirme disponibilidade, preÃ§os, formas de pagamento e entrega.</p>
     </div>
   </div>
 </section>
 
 <section class="contact" id="contato">
   <div class="container">
-    <h2>Faça seu pedido</h2>
-    <p>Quer receber o catálogo e consultar disponibilidade? Fale com a 042 Distribuidora.</p>
-    <!-- TROQUE o número abaixo pelo WhatsApp da distribuidora, no formato 55 + DDD + número. -->
-    <a class="btn" href="https://wa.me/5500000000000?text=Olá!%20Vim%20pelo%20site%20da%2042%20Distribuidora%20e%20quero%20fazer%20um%20pedido." target="_blank" rel="noopener">Abrir WhatsApp</a>
+    <h2>FaÃ§a seu pedido</h2>
+    <p>Quer receber o catÃ¡logo e consultar disponibilidade? Fale com a 042 Distribuidora.</p>
+    <!-- TROQUE o nÃºmero abaixo pelo WhatsApp da distribuidora, no formato 55 + DDD + nÃºmero. -->
+    <a class="btn" href="https://wa.me/5542998413122?text=OlÃ¡!%20Vim%20pelo%20site%20da%20042%20Distribuidora%20e%20quero%20fazer%20um%20pedido." target="_blank" rel="noopener">Abrir WhatsApp</a>
   </div>
 </section>
 </main>
 
-<div class="notice">🔞 Venda de bebidas alcoólicas proibida para menores de 18 anos. Beba com responsabilidade.</div>
-<footer>© 2026 042 Distribuidora — Conveniência & Delivery</footer>
+<div class="notice">ðŸ”ž Venda de bebidas alcoÃ³licas proibida para menores de 18 anos. Beba com responsabilidade.</div>
+<footer>Â© 2026 042 Distribuidora â€” ConveniÃªncia & Delivery</footer>
+
+<script>
+let carrinho = [];
+
+function adicionarCarrinho(produto){
+    carrinho.push(produto);
+    atualizarCarrinho();
+    alert(produto + " adicionado ao carrinho!");
+}
+
+function atualizarCarrinho(){
+    document.getElementById("qtdCarrinho").innerText = carrinho.length;
+}
+
+function finalizarPedido(){
+    if(carrinho.length === 0){
+        alert("Seu carrinho estÃ¡ vazio!");
+        return;
+    }
+
+    let mensagem = "OlÃ¡! Gostaria de fazer o seguinte pedido:%0A%0A";
+    carrinho.forEach((item,index)=>{
+        mensagem += (index+1)+". "+item+"%0A";
+    });
+
+    window.open("https://wa.me/5542998413122?text="+mensagem,"_blank");
+}
+</script>
 </body>
 </html>
