@@ -99,7 +99,7 @@
         <div class="w-12 h-12 rounded-2xl bg-black border border-amber-500/40 p-1 flex items-center justify-center overflow-hidden shadow-md shadow-amber-500/10 group-hover:border-amber-400 transition-all">
           <img 
             id="brand-logo"
-            src="photo_5003775425880198242_x.jpg" 
+            src="logo.jpg" 
             alt="Logo Zero42" 
             class="w-full h-full object-contain"
             onerror="this.onerror=null; this.src='https://placehold.co/120x120/000000/f59e0b?text=ZERO42';"
@@ -722,7 +722,10 @@
 
     try {
       const savedCart = localStorage.getItem(CART_STORAGE_KEY);
-      if (savedCart) shoppingCart = JSON.parse(savedCart);
+      if (savedCart) {
+        const parsedCart = JSON.parse(savedCart);
+        shoppingCart = Array.isArray(parsedCart) ? parsedCart : [];
+      }
     } catch (e) {
       shoppingCart = [];
     }
@@ -988,6 +991,9 @@
           </div>
         `;
         subtotalElem.innerText = "R$ 0,00";
+        shippingElem.innerText = currentOrderMode === 'delivery'
+          ? `R$ ${SHIPPING_COST.toFixed(2).replace('.', ',')}`
+          : 'Grátis (Balcão)';
         totalElem.innerText = "R$ 0,00";
         return;
       }
