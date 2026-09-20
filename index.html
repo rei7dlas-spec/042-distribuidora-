@@ -85,10 +85,10 @@
 
   <!-- Faixa de Destaque Superior -->
   <div class="bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 text-black py-2 px-4 font-bold text-xs sm:text-sm text-center shadow-lg flex items-center justify-center gap-2">
-    <span>ðŸ‘‘</span>
+    <span>👑</span>
     <span><strong>ZERO42 DELIVERY:</strong> Cervejas trincando, whiskies, tequilas e licores na sua porta!</span>
-    <span class="hidden md:inline">â€¢ PeÃ§a jÃ¡ via WhatsApp</span>
-    <span>ðŸ›µ</span>
+    <span class="hidden md:inline">• Peça já via WhatsApp</span>
+    <span>🛵</span>
   </div>
 
   <header class="sticky top-0 z-40 bg-zdark/95 backdrop-blur-md border-b border-zborder/80">
@@ -307,13 +307,13 @@
           Todos (10)
         </button>
         <button onclick="applyCategoryFilter('cervejas')" class="filter-chip px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap bg-zsurface text-slate-300 border border-zborder hover:border-zgold transition-all">
-          ðŸº Cervejas & Chopps
+          🍺 Cervejas & Chopps
         </button>
         <button onclick="applyCategoryFilter('destilados')" class="filter-chip px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap bg-zsurface text-slate-300 border border-zborder hover:border-zgold transition-all">
-          ðŸ¥ƒ Destilados & Whiskies
+          🥃 Destilados & Whiskies
         </button>
         <button onclick="applyCategoryFilter('especiais')" class="filter-chip px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap bg-zsurface text-slate-300 border border-zborder hover:border-zgold transition-all">
-          âœ¨ Licores & Combos
+          ✨ Licores & Combos
         </button>
       </div>
     </div>
@@ -576,7 +576,7 @@
       {
         id: 1,
         name: "Cerveja Praya Lager Sem Glúten",
-        subtitle: "ContÃ©m 6 garrafas de 330ml â€¢ Puro Malte",
+        subtitle: "Contém 6 garrafas de 330ml • Puro Malte",
         category: "cervejas",
         price: 59.90,
         volume: "Pack 6 x 330ml",
@@ -590,7 +590,7 @@
       {
         id: 2,
         name: "Heineken Ultimate Puro Malte Sem Glúten",
-        subtitle: "30% Menos Calorias â€¢ Pack 6 garrafas de 330ml",
+        subtitle: "30% Menos Calorias • Pack 6 garrafas de 330ml",
         category: "cervejas",
         price: 54.90,
         volume: "Pack 6 x 330ml",
@@ -632,7 +632,7 @@
       {
         id: 5,
         name: "Chopp Premium de Vinho Házbier 1,5L",
-        subtitle: "Growler de 1,5 Litro â€¢ EdiÃ§Ã£o Especial",
+        subtitle: "Growler de 1,5 Litro • Edição Especial",
         category: "cervejas",
         price: 34.90,
         volume: "Growler 1,5L",
@@ -646,7 +646,7 @@
       {
         id: 6,
         name: "Tequila José Cuervo Especial Silver 750ml",
-        subtitle: "Blue Agave Tradicional Mexicana â€¢ 100% Original",
+        subtitle: "Blue Agave Tradicional Mexicana • 100% Original",
         category: "destilados",
         price: 119.90,
         volume: "Garrafa 750ml",
@@ -674,7 +674,7 @@
       {
         id: 8,
         name: "Lagunitas DayTime Session IPA 350ml",
-        subtitle: "Lata 350ml â€¢ Born in California",
+        subtitle: "Lata 350ml • Born in California",
         category: "cervejas",
         price: 13.90,
         volume: "Lata 350ml",
@@ -688,7 +688,7 @@
       {
         id: 9,
         name: "Licor Ballena Original Cream Tequila 750ml",
-        subtitle: "Cremosa, Ãšnica e InesquecÃ­vel â€¢ Garrafa Rosa",
+        subtitle: "Cremosa, Única e Inesquecível • Garrafa Rosa",
         category: "especiais",
         price: 139.90,
         volume: "Garrafa 750ml",
@@ -887,7 +887,7 @@
             <div class="flex flex-wrap gap-1.5">
               ${item.specs.map(spec => `
                 <span class="text-[11px] bg-zsurface border border-zborder px-2.5 py-1 rounded-lg text-slate-300">
-                  âœ“ ${spec}
+                  ✓ ${spec}
                 </span>
               `).join('')}
             </div>
@@ -1106,10 +1106,10 @@
       const shipping = currentOrderMode === 'delivery' ? SHIPPING_COST : 0;
       const totalPagar = subtotal + shipping;
 
-      let msg = `ðŸ‘‘ *NOVO PEDIDO - ZERO42 CONVENIÃŠNCIA & DELIVERY*\n`;
+      let msg = `👑 *NOVO PEDIDO - ZERO42 CONVENIÊNCIA & DELIVERY*\n`;
       msg += `-------------------------------------------\n`;
       msg += `*Cliente:* ${clientName}\n`;
-      msg += `*Tipo:* ${currentOrderMode === 'delivery' ? 'ðŸ›µ Tele-Entrega' : 'ðŸ¬ Retirar no BalcÃ£o'}\n`;
+      msg += `*Tipo:* ${currentOrderMode === 'delivery' ? '🛵 Tele-Entrega' : '🏬 Retirar no Balcão'}\n`;
 
       if (currentOrderMode === 'delivery') {
         msg += `*Endereço:* ${clientAddress}\n`;
