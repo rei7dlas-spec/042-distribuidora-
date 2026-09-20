@@ -718,6 +718,14 @@
     let shoppingCart = [];
     let selectedCategory = 'todos';
     let currentOrderMode = 'delivery';
+    const CART_STORAGE_KEY = 'zero42_cart_v1';
+
+    try {
+      const savedCart = localStorage.getItem(CART_STORAGE_KEY);
+      if (savedCart) shoppingCart = JSON.parse(savedCart);
+    } catch (e) {
+      shoppingCart = [];
+    }
 
     // Renderizador do CatÃ¡logo
     function displayProducts(items) {
@@ -800,9 +808,11 @@
         btn.classList.remove('active', 'bg-zgold', 'text-black');
         btn.classList.add('bg-zsurface', 'text-slate-300');
       });
-      if (event && event.currentTarget) {
-        event.currentTarget.classList.add('active', 'bg-zgold', 'text-black');
-        event.currentTarget.classList.remove('bg-zsurface', 'text-slate-300');
+      const activeButton = Array.from(document.querySelectorAll('.filter-chip'))
+        .find(btn => btn.getAttribute('onclick') === "applyCategoryFilter('" + cat + "')");
+      if (activeButton) {
+        activeButton.classList.add('active', 'bg-zgold', 'text-black');
+        activeButton.classList.remove('bg-zsurface', 'text-slate-300');
       }
 
       if (cat === 'todos') {
@@ -933,6 +943,7 @@
         shoppingCart = shoppingCart.filter(i => i.id !== id);
       }
       refreshCartState();
+      try { localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(shoppingCart)); } catch (e) {}
     }
 
     function changeOrderMode(mode) {
@@ -1113,7 +1124,8 @@
       msg += `_OlÃ¡ Zero42! Aguardo a confirmaÃ§Ã£o do meu pedido._`;
 
       const encodedMessage = encodeURIComponent(msg);
-      window.open(`https://wa.me/${ZERO42_WHATSAPP_NUMBER}?text=${encodedMessage}`, '_blank');
+      const whatsappUrl = `https://wa.me/${ZERO42_WHATSAPP_NUMBER}?text=${encodedMessage}`;
+      window.location.href = whatsappUrl;
     }
 
     // InicializaÃ§Ã£o da AplicaÃ§Ã£o
